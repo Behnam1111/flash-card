@@ -1,5 +1,11 @@
 from tkinter import *
+import pandas
+from random import choice
 
+# ------------------------Read Csv---------------------
+words = pandas.read_csv("data/words.csv")
+words_dict = words.to_dict(orient="records")
+display_word = choice(words_dict)
 
 # -------------------------------UI-----------------------------
 BACKGROUND_COLOR = "#B1DDC6"
